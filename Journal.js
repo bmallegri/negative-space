@@ -33,3 +33,15 @@ window.onload = function(){
         }
     }
 }
+const dropdownButtons = document.querySelectorAll('.dropdown-btn');
+        dropdownButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.closest('.picture-frame').querySelector('.reflectionContent');
+                content.classList.toggle('show');
+                if(content.classList.contains('show')){
+                    button.textContent = "^";
+                }else {
+                    button.textContent = "⌄";
+                }
+            });
+        });
