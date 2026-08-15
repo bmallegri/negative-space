@@ -409,6 +409,7 @@ select{
     height: 100px;
     cursor: grab;
     touch-action: none;
+    transition: left 2s ease-out, top 2s ease-out;
 }
 .puzzle-piece.entering {
     opacity: 0;
@@ -417,6 +418,7 @@ select{
 .puzzle-piece.dragging {
     cursor: grabbing;
     z-index: 100;
+    transition: none;
 }
 .puzzle-piece svg {
     width: 100%;
