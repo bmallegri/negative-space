@@ -12,24 +12,11 @@
         <div class = "journal-container">
             <img class="journal-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQM6Z8CmzMkDKxqyI7eRSdfy1W1IV7Y6aNBtFiG3ysJJQ&s=10">
             <!--^Placeholder for drawn journal image ^-->
-            <div class = "journal-entry">
-                <div class = "picture-frame">
-                    <img id = "journal-before"class = "journal-before" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_-5_hs7Zz92p2EbWxByF0Kcc2QfY8hRliRwt0pA5ohA&s=10" alt ="Before Image" width="200">
-                    <!--^Placeholder for drawn before image ^-->
-                </div>
-                <svg class="drawn-arrow" viewBox="0 0 100 50">
-                    <path d="M5 25 C25 5, 60 45, 90 25" />
-                    <path d="M75 15 L90 25 L76 35" />
-                </svg>
-                <div class = "picture-frame">
-                    <img id = "journal-after" class = "journal-after" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKPuGsTQjWC5enXqWqti5NEq1ITP20goww4inGGtXYHw&s=10" alt ="After Image" width="200">
-                    <!--^Placeholder for drawn after image ^-->
-                    <button class = "dropdown-btn">></button>
-                    <div class = "reflectionContent" id = "reflectionContent">
-                        <p class = "reflectionDisplay" id = "reflectionDisplay"></p>
-                    </div>
-                </div>
-            </div>
+            <div class = "journalPage" id = "journalPage"></div>
+        </div>
+        <div class = "pageControls">
+            <button class = "button"id = "prevPage">back</button>
+            <button class = "button" id = "nextPage">next</button>
         </div>
         <a class = "button" href="NegativeSpace.html">Home</a>
         <script src="Journal.js"></script>
