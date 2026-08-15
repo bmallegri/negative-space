@@ -113,3 +113,15 @@ body{
     animation: fadeOn 5s;
     font-size: 15px;
 }
+.startMessage{
+    font-size:15px;
+    animation: startMessageFadeOn 5s;
+}
+@keyframes startMessageFadeOn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
