@@ -11,6 +11,27 @@ const entriesPerPage = 2;
 const previousPage = document.getElementById('prevPage');
 const nextPage = document.getElementById('nextPage');
 
+const mentalHealthLessons = [
+    "It's okay to have days where you don't accomplish much. Rest is part of taking care of yourself.",
+    "You don't have to solve everything at once. Focus on one small thing you can do today.",
+    "Taking a break doesn't mean you've failed. Sometimes stepping away helps you come back with more energy.",
+    "Your feelings are worth paying attention to, even when you can't explain exactly why you feel them.",
+    "Progress doesn't always look obvious. Small steps still count.",
+    "You don't have to compare your progress to anyone else's. Everyone moves at their own pace.",
+    "Doing something you enjoy, even for a short time, can be a meaningful way to take care of yourself."
+];
+const sessionNumber = lessons.length + 1;
+
+const lessonNumberDisplay = document.getElementById('Lesson-number');
+const lessonContentDisplay = document.getElementById('lesson-content');
+
+if (lessonNumberDisplay && lessonContentDisplay) {
+    lessonNumberDisplay.textContent = `Lesson ${sessionNumber}`;
+    
+    lessonContentDisplay.textContent =
+        mentalHealthLessons[sessionNumber - 1] || 
+        "Remember to take care of yourself and give yourself room to rest.";
+}
 if(previousPage && nextPage){
     previousPage.addEventListener('click', function(){
         if (currentPage > 0) {
@@ -57,6 +78,8 @@ if (selector && display){
 if (saveReflectionButton){
     saveReflectionButton.addEventListener('click', function(){
         const lesson = {
+            lessonNumber: document.getElementById('Lesson-number').textContent,
+            lesson: document.getElementById('lesson-content').textContent,
             image: display.src,
             reflection: lessonInput.value
         };
@@ -84,10 +107,15 @@ function createJournalEntry(lesson){
     entry.classList.add('journal-entry');
     const beforeFrame = document.createElement('div');
     beforeFrame.classList.add('picture-frame');
-    const beforeImage = document.createElement('img');
-    beforeImage.classList.add('journal-before');
-    beforeImage.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_-5_hs7Zz92p2EbWxByF0Kcc2QfY8hRliRwt0pA5ohA&s=10";
-    beforeFrame.appendChild(beforeImage);
+    const lessonInfo = document.createElement('div');
+    lessonInfo.classList.add('lesson-info');
+    const lessonNumber = document.createElement('p');
+    lessonNumber.textContent = lesson.lessonNumber;
+    const lessonText = document.createElement('p');
+    lessonText.textContent = lesson.lesson;
+    lessonInfo.appendChild(lessonNumber);
+    lessonInfo.appendChild(lessonText);
+    beforeFrame.appendChild(lessonInfo);
     const arrow = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
     arrow.classList.add('drawn-arrow');
     arrow.setAttribute('viewBox', '0 0 100 50');

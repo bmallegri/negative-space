@@ -4,6 +4,7 @@ body{
     font-weight: 400;
     background-color: #1f2024;
     color: white;
+    animation: fadeOn 5s;
 }
 .image-container{
     position: relative;
@@ -11,7 +12,6 @@ body{
     height:400px;
     margin: auto;
     padding: 20px;
-    animation: fadeOn 10s;
 }
 .slide-image{
     position: absolute;
@@ -51,7 +51,6 @@ body{
     justify-content: center;
     margin-top: 20px;
     padding: 10px;
-    animation: fadeOn 10s;
 }
 .button{
     background-color: #1f2024;
@@ -67,7 +66,6 @@ body{
     position: relative;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     transition: background-color 0.3s; 
-    animation: fadeOn 5s;
 }
 .button:hover{
     background-color: white;
@@ -80,7 +78,6 @@ body{
     text-align: center;
     font-size: 24px;
     margin: 0 auto;
-    animation: fadeOn 5s;
     background-color: #19191c;
     border: 1px solid white;
     border-radius: 20px;
@@ -91,7 +88,6 @@ body{
     text-align: center;
     font-size: 24px;
     margin: 0 auto;
-    animation: fadeOn 5s;
     background-color: #19191c;
     border: 1px solid white;
     border-radius: 20px;
@@ -112,7 +108,6 @@ body{
     text-align: center;
     font-size: 24px;
     margin: 0 auto;
-    animation: fadeOn 5s;
     font-size: 15px;
 }
 .startMessage{
@@ -251,4 +246,42 @@ input{
     gap: 10px;
     justify-content:flex-start;
     transform: translateY(20px);
+}
+.lesson-title{
+    color: black;
+    font-size: 20px;
+    text-align: center;
+    margin: 0;
+    padding: 20px 10px;
+}
+.lesson-info{
+    color: black;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.lesson-info p {
+    margin: 5px;
+}
+
+.lesson-info p:first-child {
+    font-size: 20px;
+}
+
+.lesson-info p:last-child {
+    font-size: 14px;
+    line-height: 1.3;
+}
+.journal-header{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+select{
+    border:none;
+    background-color: rgb(247, 247, 235);
 }
