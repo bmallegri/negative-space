@@ -7,8 +7,13 @@
         <link rel="stylesheet" href="NegativeSpace.css">
     </head>
     <body>
-        <h1>Session</h1>
-        <div id="countdown">Loading...</div>
+        <div class = "countdown">
+            <div id="countdown">Loading...</div>
+            <p id = "startMessage"style="font-size:15px;">Click anywhere to start brown noise</p>
+        </div>
+        <audio id="brownNoisePlayer" loop>
+            <source src="Brown Noise.mp3" type="audio/mpeg">
+        </audio>
         <script src="NegativeSpace.js"></script>
     </body>
 </html>
