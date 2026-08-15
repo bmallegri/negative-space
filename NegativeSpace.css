@@ -5,6 +5,7 @@ body{
     background-color: #1f2024;
     color: white;
     animation: fadeOn 5s;
+    transition: background-color 1s linear;
 }
 .image-container{
     position: relative;
@@ -74,15 +75,15 @@ body{
     transform: translateY(-5px);
 }
 .Congrats{
-    margin-top: 50px;
+    margin: 50px auto 0 auto;
     text-align: center;
-    font-size: 24px;
-    margin: 0 auto;
+    animation: fadeOn 1.5s ease-out;
     background-color: #19191c;
     border: 1px solid white;
     border-radius: 20px;
     width: 25%;
     font-size: 15px;
+    padding: 15px;
 }
 .lesson{
     text-align: center;
@@ -129,6 +130,7 @@ body{
     width: 100%;
     height: 100%;
     object-fit: cover; 
+    border-radius: 20px;
 }
 .journal-container{
     position: relative;
@@ -284,4 +286,131 @@ input{
 select{
     border:none;
     background-color: rgb(247, 247, 235);
+}
+.flower-scene{
+    position: relative;
+    width: 200px;
+    height: 240px;
+    margin: 0 auto;
+    overflow: hidden;
+    display: flex;
+    justify-content:center;
+    align-items: flex-end;
+}
+
+.flower{
+    position: absolute;
+    width: 180px;
+    height: 220px;
+    left: 10px;
+    bottom: 0;
+    animation: flowerSway 5s ease-in-out infinite alternate;
+    transform-origin: bottom center;
+}
+
+@keyframes flowerSway{
+    from{
+        transform: rotate(-2deg);
+    }
+    to{
+        transform: rotate(2deg);
+    }
+}
+
+.stem{
+    fill: none;
+    stroke: #6fa8b8;
+    stroke-width: 5;
+    stroke-linecap: round;
+}
+
+.leaf{
+    fill: #6fa8b8;
+    opacity: .8;
+}
+
+.petal{
+    fill: #75b9d1;
+    opacity: .8;
+    filter: drop-shadow(0 0 8px rgba(117,185,209,.7));
+}
+
+.flower-center{
+    fill: #d2edf2;
+    filter: drop-shadow(0 0 10px rgba(210,237,242,.9));
+}
+.particles{
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.particles span{
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: #bce8f2;
+    box-shadow: 0 0 8px #bce8f2;
+    animation: particleGlow 4s ease-in-out infinite alternate;
+}
+
+.particles span:nth-child(1){
+    left: 25px;
+    top: 80px;
+    animation-delay: .2s;
+}
+
+.particles span:nth-child(2){
+    left: 160px;
+    top: 60px;
+    animation-delay: 1s;
+}
+
+.particles span:nth-child(3){
+    left: 40px;
+    top: 140px;
+    animation-delay: 1.7s;
+}
+
+.particles span:nth-child(4){
+    left: 155px;
+    top: 130px;
+    animation-delay: .8s;
+}
+
+.particles span:nth-child(5){
+    left: 70px;
+    top: 40px;
+    animation-delay: 2s;
+}
+
+.particles span:nth-child(6){
+    left: 135px;
+    top: 175px;
+    animation-delay: 2.5s;
+}
+
+.particles span:nth-child(7){
+    left: 25px;
+    top: 175px;
+    animation-delay: 1.3s;
+}
+
+.particles span:nth-child(8){
+    left: 175px;
+    top: 105px;
+    animation-delay: 3s;
+}
+
+@keyframes particleGlow{
+    from{
+        opacity: .15;
+        transform: translateY(4px) scale(.7);
+    }
+
+    to{
+        opacity: .9;
+        transform: translateY(-6px) scale(1.2);
+    }
 }

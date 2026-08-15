@@ -68,6 +68,8 @@ if (resetButton){
     resetButton.addEventListener('click', function(){
         localStorage.removeItem('lessons');
         lessons.length = 0;
+        localStorage.setItem("sessionComplete", "false");
+        document.body.style.backgroundColor = "#1f2024";
     });
 }
 if (selector && display){

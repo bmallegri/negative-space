@@ -10,8 +10,43 @@
     <body>
         <div class = "Congrats">
             <p>Congrats! You did nothing!</p>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbMcuJUu4CCgnQV4Bvm_7dmUJPG9iV5IoYq6Sl1qWJsw&s=10" alt="Flower" width="200"> 
-            <!--^Placeholder for drawn flower^-->
+            <div class = "flower-scene">
+                <div class = "particles">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <svg class="flower" viewBox="0 0 200 240">
+                    <!-- stem -->
+                     <path
+                     class="stem"
+                     d="M100 220 C100 180 100 150 100 115"
+                     />
+                     <!-- leaves -->
+                      <path
+                      class="leaf left-leaf"
+                      d="M100 175 C75 165 55 175 48 195 C70 198 90 190 100 175Z"
+                      />
+                      <path
+                      class="leaf right-leaf"
+                      d="M100 150 C125 140 145 148 152 168 C130 170 112 163 100 150Z"
+                      />
+                      <!-- flower petals -->
+                       <circle class="petal" cx="100" cy="65" r="30"/>
+                       <circle class="petal" cx="135" cy="80" r="30"/>
+                       <circle class="petal" cx="125" cy="115" r="30"/>
+                       <circle class="petal" cx="75" cy="115" r="30"/>
+                       <circle class="petal" cx="65" cy="80" r="30"/>
+                       <!-- center -->
+                        <circle class="flower-center" cx="100" cy="90" r="23"/>
+                    </svg>
+                </div>
+            </div>
         </div>
         <div class = "lesson">
             <p class = "Lesson-number" id = "Lesson-number"></p>
@@ -33,6 +68,7 @@
                 <button class = "button" id="saveReflectionButton">Save</button>
             </div>
         </div>
+        <script src="background.js"></script>
         <script src="Journal.js"></script>
     </body>
 </html>
