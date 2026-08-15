@@ -4,7 +4,14 @@ const lessonInput = document.getElementById('lessonInput')
 const saveReflectionButton = document.getElementById('saveReflectionButton')
 const reflectionDisplay = document.getElementById('reflectionDisplay')
 const lessons = JSON.parse(localStorage.getItem('lessons')) || [];
+const resetButton = document.getElementById('resetButton');
 
+if (resetButton){
+    resetButton.addEventListener('click', function(){
+        localStorage.removeItem('lessons');
+        lessons.length = 0;
+    });
+}
 if (selector && display){
     selector.addEventListener('change', function(){
         display.src = this.value;
