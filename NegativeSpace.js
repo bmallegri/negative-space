@@ -40,6 +40,7 @@ function updateTimer() {
      display.textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
      timeLeft--;
      updateBackground(timeLeft, totalTime);
+     updatePuzzle(timeLeft, totalTime);
 }
 updateTimer(); 
 const timerInterval = setInterval(updateTimer, 1000);
