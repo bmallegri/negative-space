@@ -20,4 +20,6 @@ Negative Space is a web experience designed to help people practice intentional 
 - Designing an interactive user interface
 - Changing all page backgrounds in synchronization with a timer using JavaScript
 ## AI Usage
-AI tools were used to assist with the implementation of several features, including the interactive puzzle animations, the swaying flower, and the arrows between images, however, the remaining features were coded and drawn by hand. All AI-generated suggestions were reviewed and adapted by the project team. AI usage was permitted under the hackathon rules.
+AI tools were used to assist with the implementation of several features, including the interactive puzzle animations, the swaying flower, and the arrows between images; however, the remaining features were coded and drawn by hand. All AI-generated suggestions were reviewed and adapted by the project team. AI usage was permitted under the hackathon rules.
+## Youtube Link to Demo
+https://youtu.be/B2M93BegeC8
